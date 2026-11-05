@@ -42,3 +42,9 @@ Git-доказательства: `git log --graph --oneline --all`, `git branch
 ## Ограничения
 
 Проверяется наличие непустого YAML workflow, а не его корректность или реальные запуски. Правила внутренние, результат не является сертификацией ISO/IEC/IEEE 828.
+
+## GitHub
+
+[darklezzzz/configuration-auditor](https://github.com/darklezzzz/configuration-auditor).
+
+Подтверждения успешных и предусмотренных неуспешных сценариев: [CI_EVIDENCE.md](CI_EVIDENCE.md).

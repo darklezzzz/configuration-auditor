@@ -1,20 +1,12 @@
-# Подтверждения CI
+# Подтверждения GitHub Actions
 
-Статус: workflow подготовлен; удалённые запуски GitHub Actions ещё не выполнялись.
-Локальные результаты находятся в examples/verification.txt. Они не заменяют ссылки
-или скриншоты Actions, требуемые для сдачи.
+Все ссылки ведут на реальные завершённые запуски.
 
-После разрешённой публикации отдельного репозитория необходимо сохранить:
+- [Push main: успешный CI](https://github.com/darklezzzz/configuration-auditor/actions/runs/42021400453): `success`, commit `c17aa833e71de33a0b11d5648d1a1492ef2a3fcf`.
+- [Pull request: успешный CI](https://github.com/darklezzzz/configuration-auditor/actions/runs/42021479597): `success`, commit `8d3d6a6c63c63d9f417904582cb937e6a8db04ab`.
 
-- URL успешного запуска push с Python 3.11/3.12;
-- URL успешного запуска pull_request;
-- для задания 5: URL намеренно неуспешного запуска и исправляющего коммита;
-- для задания 6: URL успешного v1.0.0 и неуспешного несовпадающего тега v1.0.1;
-- для задания 8: URL двух рассмотренных pull requests.
+[Pull request с проверкой](https://github.com/darklezzzz/configuration-auditor/pull/1).
 
-Обычный CI не вызывает release-manager check-tag; тестирование без тега обязательно.
-Только release.yml в задании 6 запускает проверку тега перед созданием артефактов.
+Успешный CI сохраняет audit-3.11 и audit-3.12 с JSON/HTML отчётами.
 
-Workflow основан на официальной документации:
-https://docs.github.com/en/actions/tutorials/build-and-test-code/python
-Версии Actions закреплены точными release-тегами; Python-зависимости — uv.lock.
+Полная метаинформация: github-evidence.json в общем комплекте сдачи.

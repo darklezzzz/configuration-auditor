@@ -1,0 +1,22 @@
+LOCAL verification; Python 3.12.14 (main, Sep  1 2026, 14:09:38) [Clang 22.1.3 ]
+
+$ /Users/artyom/Projects/labprog10/.venv/bin/python -m pytest /Users/artyom/Projects/labprog10/configuration-auditor/tests -q
+...................                                                      [100%]
+19 passed in 1.18s
+Exit code: 0
+
+$ /Users/artyom/Projects/labprog10/.venv/bin/python -m ruff check --no-respect-gitignore /Users/artyom/Projects/labprog10/configuration-auditor
+All checks passed!
+Exit code: 0
+
+$ configuration-auditor --help
+usage: configuration-auditor [-h] {audit} ...
+
+configuration-auditor
+
+positional arguments:
+  {audit}
+
+options:
+  -h, --help  show this help message and exit
+Exit code: 0

@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "findings": [
+    {
+      "rule": "files",
+      "severity": "error",
+      "passed": true,
+      "message": "README.md"
+    },
+    {
+      "rule": "files",
+      "severity": "error",
+      "passed": true,
+      "message": "CHANGELOG.md"
+    },
+    {
+      "rule": "files",
+      "severity": "error",
+      "passed": true,
+      "message": "pyproject.toml"
+    },
+    {
+      "rule": "version",
+      "severity": "error",
+      "passed": true,
+      "message": "project.version: 1.0.0"
+    },
+    {
+      "rule": "git",
+      "severity": "error",
+      "passed": true,
+      "message": "Локальный Git-репозиторий"
+    },
+    {
+      "rule": "commits",
+      "severity": "warning",
+      "passed": true,
+      "message": "11/5 коммитов"
+    },
+    {
+      "rule": "ci",
+      "severity": "error",
+      "passed": true,
+      "message": "Наличие непустого workflow; синтаксис YAML и запуски проверяются отдельно"
+    }
+  ],
+  "limitations": "Проверка внутренних правил не является сертификацией ISO/IEC/IEEE 828."
+}

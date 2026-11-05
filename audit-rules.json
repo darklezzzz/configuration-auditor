@@ -1,0 +1,17 @@
+{
+  "required_files": [
+    "README.md",
+    "CHANGELOG.md",
+    "pyproject.toml"
+  ],
+  "require_git": true,
+  "require_ci": true,
+  "min_commits": 5,
+  "severity": {
+    "files": "error",
+    "version": "error",
+    "git": "error",
+    "commits": "warning",
+    "ci": "error"
+  }
+}

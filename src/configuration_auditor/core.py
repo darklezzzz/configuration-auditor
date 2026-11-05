@@ -45,7 +45,7 @@ def load_rules(path):
             raise ValueError("Неверные типы или значения правил")
         result["severity"] = DEFAULT_RULES["severity"] | result["severity"]
         return result
-    except (OSError, json.JSONDecodeError, TypeError) as exc:
+    except (OSError, UnicodeError, json.JSONDecodeError, TypeError) as exc:
         raise ValueError("Конфигурация правил отсутствует или повреждена") from exc
 
 
@@ -81,7 +81,7 @@ def audit(directory, rules_path):
             re.fullmatch(r"(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)", version)
         )
         record("version", valid, f"project.version: {version}")
-    except (OSError, KeyError, TypeError, tomllib.TOMLDecodeError):
+    except (OSError, UnicodeError, KeyError, TypeError, tomllib.TOMLDecodeError):
         record("version", False, "pyproject.toml отсутствует, повреждён или не содержит версию")
     git_present = (root / ".git").exists()
     if rules["require_git"]:

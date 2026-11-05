@@ -105,3 +105,11 @@ def test_html_escape(tmp_path):
     write_reports(result, tmp_path / "report.json", tmp_path / "report.html")
     assert "&lt;script&gt;" in (tmp_path / "report.html").read_text()
     assert json.loads((tmp_path / "report.json").read_text()) == result
+
+
+def test_non_utf8_files(sample):
+    root, rules = sample
+    (root / "pyproject.toml").write_bytes(b"\xff\xfe")
+    assert not audit(root, rules)["passed"]
+    rules.write_bytes(b"\xff\xfe")
+    assert audit(root, rules)["findings"][0]["rule"] == "config"
